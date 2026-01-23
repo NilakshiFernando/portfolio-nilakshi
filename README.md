@@ -26,4 +26,4 @@ A modern, responsive portfolio website showcasing my skills, experience, and pro
 - LinkedIn: linkedin.com/in/nilakshi-fernando
 - GitHub: github.com/NilakshiFernando
 
-© 2024 Nilakshi Fernando | Based in Sri Lanka
+© 2026 Nilakshi Fernando | Based in Sri Lanka
