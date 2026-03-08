@@ -274,6 +274,25 @@
             text-align: center;
             position: relative;
         }
+        .hero-social{
+position:absolute;
+bottom:40px;
+left:40px;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.hero-social a{
+color:white;
+font-size:22px;
+transition:0.3s;
+}
+
+.hero-social a:hover{
+color:#ff8fa3;
+transform:translateY(-5px);
+}
 
         .profile-container {
             width: 380px;
@@ -1317,29 +1336,12 @@
             <nav>
                 <div class="logo">Nilakshi<span>Fernando</span></div>
                 <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#home">About me</a></li>
+                    <li><a href="#about">Export On</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#education">Education & Experience</a></li>
                     <li><a href="#contact">Contact</a></li>
                     </ul><br>
-                <div class="nav-right">
-                <div class="social-nav">
-                    <ul>
-                        <li><a href="https://instagram.com/nilakshi.fernando" target="_blank" title="Instagram">
-                        <i class="fab fa-instagram">
-                    </a></i>
-                    <li><a href="https://linkedin.com/in/nilakshi-fernando" target="_blank" title="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a></li>
-                    <li><a href="https://github.com/NilakshiFernando" target="_blank" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a></li>
-                    <li><a href="https://pinterest.com/nishifrozera72" target="_blank" title="Pinterest">
-                        <i class="fab fa-pinterest"></i>
-                    </a></li></ul>
-                </div></div>
-            </div>
             <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
         </nav>
     </div>
@@ -1372,6 +1374,23 @@
                 </div>
             </div>
         </div>
+        <div class="hero-social">
+    <a href="https://instagram.com/nilakshi.fernando" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://linkedin.com/in/nilakshi-fernando" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <a href="https://github.com/NilakshiFernando" target="_blank">
+        <i class="fab fa-github"></i>
+    </a>
+
+    <a href="https://pinterest.com/nishifrozera72" target="_blank">
+        <i class="fab fa-pinterest"></i>
+    </a>
+</div>
     </section>
 
     <!-- About Section -->
@@ -1431,9 +1450,37 @@
                             </div>
                         </div>
                         <div class="tech-skill-item">
+                            <div class="skill-logo"><i class="fab fa-nextjs"></i></div>
+                            <div class="skill-details">
+                                <div class="skill-name">Next.js</div>
+                                <div class="skill-level">Intermediate</div>
+                            </div>
+                        </div>
+                        <div class="tech-skill-item">
+                            <div class="skill-logo"><i class="fab fa-tailwind-css"></i></div>
+                            <div class="skill-details">
+                                <div class="skill-name">Tailwind CSS</div>
+                                <div class="skill-level">Intermediate</div>
+                            </div>
+                        </div>
+                        <div class="tech-skill-item">
+                            <div class="skill-logo"><i class="fab fa-i18n"></i></div>
+                            <div class="skill-details">
+                                <div class="skill-name">i18next</div>
+                                <div class="skill-level">Intermediate</div>
+                            </div>
+                        </div>
+                        <div class="tech-skill-item">
                             <div class="skill-logo"><i class="fab fa-python"></i></div>
                             <div class="skill-details">
                                 <div class="skill-name">Python</div>
+                                <div class="skill-level">Intermediate</div>
+                            </div>
+                        </div>
+                        <div class="tech-skill-item">
+                            <div class="skill-logo"><i class="fab fa-firebase"></i></div>
+                            <div class="skill-details">
+                                <div class="skill-name">Firebase</div>
                                 <div class="skill-level">Intermediate</div>
                             </div>
                         </div>
@@ -1452,9 +1499,51 @@
                             </div>
                         </div>
                         <div class="tech-skill-item">
+                            <div class="skill-logo"><i class="fab fa-redux"></i></div>
+                            <div class="skill-details">
+                                <div class="skill-name">Redux</div>
+                                <div class="skill-level">Intermediate</div>
+                            </div>
+                        </div>
+                        <div class="tech-skill-item">
+                            <div class="skill-logo"><i class="fab fa-bootstrap"></i></div>
+                            <div class="skill-details">
+                                <div class="skill-name">Bootstrap</div>
+                                <div class="skill-level">Intermediate</div>
+                            </div>
+                        </div>
+                        <div class="tech-skill-item">
+                            <div class="skill-logo"><i class="fab fa-node-js"></i></div>
+                            <div class="skill-details">
+                                <div class="skill-name">Node.js</div>
+                                <div class="skill-level">Intermediate</div>
+                            </div>
+                        </div>
+                        <div class="tech-skill-item">
+                            <div class="skill-logo"><i class="fab fa-express"></i></div>
+                            <div class="skill-details">
+                                <div class="skill-name">Express.js</div>
+                                <div class="skill-level">Intermediate</div>
+                            </div>
+                        </div>
+                        <div class="tech-skill-item">
                             <div class="skill-logo"><i class="fas fa-database"></i></div>
                             <div class="skill-details">
                                 <div class="skill-name">MySQL</div>
+                                <div class="skill-level">Intermediate</div>
+                            </div>
+                        </div>
+                        <div class="tech-skill-item">
+                            <div class="skill-logo"><i class="fab fa-supabase"></i></div>
+                            <div class="skill-details">
+                                <div class="skill-name">Supabase</div>
+                                <div class="skill-level">Intermediate</div>
+                            </div>
+                        </div>
+                        <div class="tech-skill-item">
+                            <div class="skill-logo"><i class="fab fa-vercel"></i></div>
+                            <div class="skill-details">
+                                <div class="skill-name">Vercel</div>
                                 <div class="skill-level">Intermediate</div>
                             </div>
                         </div>
@@ -1488,6 +1577,7 @@
                             <div class="skill-bar-fill" data-width="90%"></div>
                         </div>
                     </div>
+                    
                     <div class="skill-item">
                         <div class="skill-name-bar">
                             <span>Teamwork</span>
@@ -1504,6 +1594,60 @@
                         </div>
                         <div class="skill-bar">
                             <div class="skill-bar-fill" data-width="88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name-bar">
+                            <span>Adaptability</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-width="90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name-bar">
+                            <span>Attention to Detail</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-width="90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name-bar">
+                            <span>Collaboration</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-width="90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name-bar">
+                            <span>Continuous Learning</span>
+                            <span>100%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-width="100%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name-bar">
+                            <span>Responsibility / Accountability</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-width="90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name-bar">
+                            <span>Patience</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-width="90%"></div>
                         </div>
                     </div>
                 </div>
@@ -1742,9 +1886,9 @@ document.head.appendChild(style);
             // Hide/show header on scroll
             const header = document.getElementById('header');
             if (window.pageYOffset > 100) {
-                header.classList.add('hidden');
+                header.classList.add('scrolled');
             } else {
-                header.classList.remove('hidden');
+                header.classList.remove('scrolled');
             }
         });
         
