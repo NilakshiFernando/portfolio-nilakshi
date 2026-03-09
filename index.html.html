@@ -762,12 +762,14 @@ transform:translateY(-5px);
         }
 
         .skill-bar {
-            height: 12px;
+            width: 100%;
+            height: 8px;
             background-color: #e8e8e8;
             border-radius: 6px;
             overflow: hidden;
             position: relative;
             transition: background-color 0.5s ease;
+            margin-top: 5px;
         }
 
         body.dark-mode .skill-bar {
@@ -775,14 +777,14 @@ transform:translateY(-5px);
         }
 
         .skill-bar-fill {
+            width: 0;
             position: absolute;
             top: 0;
             left: 0;
             height: 100%;
             background: linear-gradient(90deg, var(--cute-green), var(--cute-blue));
-            border-radius: 6px;
-            width: 0;
-            transition: width 1.5s ease;
+            border-radius: 5px;
+            transition: width 1.5s ease-in-out;
         }
 
         .soft .skill-bar-fill {
@@ -1617,10 +1619,10 @@ transform:translateY(-5px);
                     <div class="skill-item">
                         <div class="skill-name-bar">
                             <span>Continuous Learning</span>
-                            <span>100%</span>
+                            <span>98%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-bar-fill" data-width="100%"></div>
+                            <div class="skill-bar-fill" data-width="98%"></div>
                         </div>
                     </div>
                     <div class="skill-item">
@@ -1944,127 +1946,24 @@ document.head.appendChild(style);
             });
         }
         
-        // Profile Picture Upload Functionality
-        const profileUploadTrigger = document.getElementById('profileUploadTrigger');
-        const uploadModal = document.getElementById('uploadModal');
-        const closeModal = document.getElementById('closeModal');
-        const uploadFileBtn = document.getElementById('uploadFileBtn');
-        const useSampleBtn = document.getElementById('useSampleBtn');
-        const profileUpload = document.getElementById('profileUpload');
-        const profileImageContainer = document.getElementById('profileImageContainer');
-        
-        // Open upload modal
-        profileUploadTrigger.addEventListener('click', () => {
-            uploadModal.classList.add('active');
-        });
-        
-        // Close upload modal
-        closeModal.addEventListener('click', () => {
-            uploadModal.classList.remove('active');
-        });
-        
-        // Close modal when clicking outside
-        uploadModal.addEventListener('click', (e) => {
-            if (e.target === uploadModal) {
-                uploadModal.classList.remove('active');
-            }
-        });
-        
-        // Trigger file input when upload button is clicked
-        uploadFileBtn.addEventListener('click', () => {
-            profileUpload.click();
-        });
-        
-        // Use sample image
-        useSampleBtn.addEventListener('click', () => {
-            // Using a sample image URL - you can replace this with your actual image
-            const sampleImageUrl = 'nilakshi.jpg';
-            
-            // Create image element
-            const img = document.createElement('img');
-            img.src = sampleImageUrl;
-            img.alt = 'Nilakshi Fernando';
-            
-            // Remove existing icon and add image
-            const icon = profileImageContainer.querySelector('i');
-            if (icon) icon.style.display = 'none';
-            
-            // Remove existing image if any
-            const existingImg = profileImageContainer.querySelector('img');
-            if (existingImg) profileImageContainer.removeChild(existingImg);
-            
-            profileImageContainer.prepend(img);
-            uploadModal.classList.remove('active');
-            
-            // Save to localStorage
-            localStorage.setItem('profileImage', sampleImageUrl);
-        });
-        
-        // Handle file upload
-        profileUpload.addEventListener('change', (e) => {
-            const file = e.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                
-                reader.onload = (event) => {
-                    const img = document.createElement('img');
-                    img.src = event.target.result;
-                    img.alt = 'Nilakshi Fernando';
-                    
-                    // Remove existing icon and add image
-                    const icon = profileImageContainer.querySelector('i');
-                    if (icon) icon.style.display = 'none';
-                    
-                    // Remove existing image if any
-                    const existingImg = profileImageContainer.querySelector('img');
-                    if (existingImg) profileImageContainer.removeChild(existingImg);
-                    
-                    profileImageContainer.prepend(img);
-                    uploadModal.classList.remove('active');
-                    
-                    // Save to localStorage
-                    localStorage.setItem('profileImage', event.target.result);
-                };
-                
-                reader.readAsDataURL(file);
-            }
-        });
-        
-        // Load profile image from localStorage on page load
-        window.addEventListener('load', () => {
-            const savedImage = localStorage.getItem('profileImage');
-            if (savedImage) {
-                const img = document.createElement('img');
-                img.src = savedImage;
-                img.alt = 'Nilakshi Fernando';
-                
-                // Remove existing icon
-                const icon = profileImageContainer.querySelector('i');
-                if (icon) icon.style.display = 'none';
-                
-                // Remove existing image if any
-                const existingImg = profileImageContainer.querySelector('img');
-                if (existingImg) profileImageContainer.removeChild(existingImg);
-                
-                profileImageContainer.prepend(img);
-            }
-        });
         
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
-            createParticles();
-            animateSkillBars();
-            
-            // Listen for scroll to animate skill bars
-            window.addEventListener('scroll', animateSkillBars);
-            
-            // Typewriter effect reset on page load
-            const typewriter = document.querySelector('.typewriter');
-            typewriter.style.animation = 'none';
-            setTimeout(() => {
-                typewriter.style.animation = '';
-            }, 10);
-        });
+    createParticles();
+    animateSkillBars();
+
+    window.addEventListener('scroll', animateSkillBars);
+    //window.addEventListener('load', animateSkillBars);
+
+    const typewriter = document.querySelector('.typewriter');
+
+    if (typewriter) {
+        typewriter.style.animation = 'none';
+        setTimeout(() => {
+            typewriter.style.animation = '';
+        }, 10);
+    }
+});
     </script>
 </body>
 </html>
