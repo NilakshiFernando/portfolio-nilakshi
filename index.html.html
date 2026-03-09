@@ -1312,23 +1312,19 @@ transform:translateY(-5px);
         <i class="fas fa-moon"></i>
     </button>
     
-    <!-- Profile Upload Modal -->
-    <div class="upload-modal" id="uploadModal">
-        <div class="upload-content">
-            <h3>Upload Profile Picture</h3>
-            <p>Choose a method to add your profile picture</p>
-            <div class="upload-options">
-                <button class="upload-btn" id="uploadFileBtn">
-                    <i class="fas fa-upload"></i> Upload from Computer
-                </button>
-                <button class="upload-btn" id="useSampleBtn">
-                    <i class="fas fa-image"></i> Use Sample Image
-                </button>
-                <input type="file" id="profileUpload" accept="image/*" style="display: none;">
-            </div>
-            <button class="close-modal" id="closeModal">Cancel</button>
+   <!-- Profile Image Modal -->
+<div class="upload-modal" id="uploadModal">
+    <div class="upload-content">
+        <h3>Profile Picture</h3>
+        <p>This is the profile image</p>
+
+        <div class="profile-image-preview">
+            <img src="nilakshi.jpg" alt="Profile Picture" width="150" height="150" style="border-radius:50%;">
         </div>
+
+        <button class="close-modal" id="closeModal">Close</button>
     </div>
+</div>
     
     <!-- Header & Navigation -->
     <header id="header">
@@ -1360,18 +1356,13 @@ transform:translateY(-5px);
 <a href="nilakshi_cv.pdf" class="btn btn-secondary" id="downloadCV" download="Nilakshi-Fernando-CV.pdf">Download CV <i class="fas fa-download"></i></a>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <div class="profile-container">
-                        <div class="profile-image" id="profileImageContainer">
-                            <!-- Default profile icon -->
-                            <i class="fas fa-user"></i>
-                            <!-- Profile picture will be added here via JavaScript -->
-                            <div class="profile-upload-overlay" id="profileUploadTrigger">
-                                <i class="fas fa-camera"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               <div class="hero-image">
+    <div class="profile-container">
+        <div class="profile-image">
+            <img src="nilakshi.jpg" alt="Profile Picture">
+        </div>
+    </div>
+</div>
             </div>
         </div>
         <div class="hero-social">
